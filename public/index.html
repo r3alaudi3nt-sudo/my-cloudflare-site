@@ -3,26 +3,208 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Happy Cloudflare Page</title>
-  <style>
-    :root{--bg:#f0f8ff;--card:#fff;--accent:#0b74de;--text:#222}
-    *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
-    body{margin:0;min-height:100vh;background:linear-gradient(180deg,var(--bg),#e8f3ff);display:flex;align-items:center;justify-content:center;padding:24px;color:var(--text)}
-    .card{background:var(--card);border-radius:12px;padding:28px;width:100%;max-width:520px;box-shadow:0 8px 30px rgba(12,40,80,0.08);text-align:center}
-    h1{margin:0 0 8px;font-size:28px}p{margin:8px 0 16px;font-size:16px}.buttons{display:flex;gap:10px;justify-content:center;margin:12px 0}
-    .btn{padding:10px 14px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
-    .tiny{font-size:12px;color:#666;margin-top:14px}
-  </style>
+  <title>Your Business — Contact & Booking</title>
+  <meta name="description" content="Professional services. Book appointments and get in touch quickly." />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <h1>Hello from Cloudflare! 👋</h1>
-    <p>This is my very own webpage. I made it with a few clicks.</p>
-    <div class="buttons">
-      <a class="btn" href="https://pages.cloudflare.com/" target="_blank" rel="noopener">Cloudflare Pages</a>
-      <a class="btn" href="https://github.com/new" target="_blank" rel="noopener">Create GitHub repo</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <!-- Inline SVG logo (no external image files needed) -->
+        <svg class="logo" role="img" aria-label="Your Business logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" focusable="false">
+          <rect width="120" height="120" rx="18" fill="#0b74de"/>
+          <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="44" fill="#ffffff">YN</text>
+        </svg>
+
+        <div>
+          <h1 class="site-title">Your Business Name</h1>
+          <div class="site-tag">Professional services — Book online</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <p class="tiny">To change text: edit this file on GitHub and Cloudflare will update the site automatically.</p>
-  </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h2>Professional Services — Book Online</h2>
+          <p>High-quality service tailored to your needs. Easy booking, friendly support, and beautiful results.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="https://calendly.com/your-username" target="_blank" rel="noopener">Book Now</a>
+            <a class="btn" href="#contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="hero-image" aria-hidden="true">
+          <!-- Inline SVG hero placeholder -->
+          <svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" class="svg-hero" role="img" focusable="false">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#e6f2ff"/>
+                <stop offset="1" stop-color="#d6ecff"/>
+              </linearGradient>
+            </defs>
+            <rect width="1200" height="700" rx="18" fill="url(#g1)"/>
+            <g transform="translate(80,120)">
+              <rect x="0" y="0" width="460" height="340" rx="12" fill="#ffffff" opacity="0.55"/>
+              <text x="260" y="190" text-anchor="middle" dominant-baseline="middle" font-family="Arial,Helvetica,sans-serif" font-size="42" fill="#0b74de">Hero Image</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="wrap">
+        <h3>Services</h3>
+        <p class="lead">Choose the service that suits you. Click Book to schedule a session.</p>
+
+        <div class="services-grid">
+          <article class="service">
+            <!-- Inline service image -->
+            <svg viewBox="0 0 600 400" class="svc-img" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+              <rect width="600" height="400" rx="10" fill="#f0f8ff"/>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="28" fill="#0b74de">Service 1</text>
+            </svg>
+
+            <h4>Service One</h4>
+            <p>Short description of Service One — what you get and why it’s great.</p>
+            <div class="service-actions">
+              <a class="btn small" href="https://calendly.com/your-username/service-one" target="_blank" rel="noopener">Book</a>
+              <a class="btn outline small" href="#contact">Ask a Question</a>
+            </div>
+          </article>
+
+          <article class="service">
+            <svg viewBox="0 0 600 400" class="svc-img" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+              <rect width="600" height="400" rx="10" fill="#fff7ed"/>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="28" fill="#ff7a00">Service 2</text>
+            </svg>
+
+            <h4>Service Two</h4>
+            <p>Short description of Service Two — features, duration, price range.</p>
+            <div class="service-actions">
+              <a class="btn small" href="https://calendly.com/your-username/service-two" target="_blank" rel="noopener">Book</a>
+              <a class="btn outline small" href="#contact">Ask a Question</a>
+            </div>
+          </article>
+
+          <article class="service">
+            <svg viewBox="0 0 600 400" class="svc-img" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+              <rect width="600" height="400" rx="10" fill="#f3fff0"/>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="28" fill="#10b981">Service 3</text>
+            </svg>
+
+            <h4>Service Three</h4>
+            <p>Short description of Service Three — quick summary for clients.</p>
+            <div class="service-actions">
+              <a class="btn small" href="https://calendly.com/your-username/service-three" target="_blank" rel="noopener">Book</a>
+              <a class="btn outline small" href="#contact">Ask a Question</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section alt">
+      <div class="wrap">
+        <h3>Gallery</h3>
+        <p class="lead">Recent work — click to view larger.</p>
+        <div class="gallery-grid">
+          <!-- Eight inline SVG thumbnails (click opens the same SVG in a new tab) -->
+          <a href="#" onclick="openSVG(this); return false;" data-svg="Gallery image 1"><svg class="thumb" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="400" height="300" rx="8" fill="#eef2ff"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="20" fill="#4f46e5">Gallery 1</text></svg></a>
+
+          <a href="#" onclick="openSVG(this); return false;" data-svg="Gallery image 2"><svg class="thumb" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="400" height="300" rx="8" fill="#fff7ed"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="20" fill="#ff7a00">Gallery 2</text></svg></a>
+
+          <a href="#" onclick="openSVG(this); return false;" data-svg="Gallery image 3"><svg class="thumb" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="400" height="300" rx="8" fill="#f0fff4"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="20" fill="#059669">Gallery 3</text></svg></a>
+
+          <a href="#" onclick="openSVG(this); return false;" data-svg="Gallery image 4"><svg class="thumb" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><rect width="400" height="300" rx="8" fill="#fff0f6"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="20" fill="#db2777">Gallery 4</text></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="wrap contact-inner">
+        <div class="contact-info">
+          <h3>Contact & Booking</h3>
+          <p>Prefer to email? Use <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a> or fill the booking form.</p>
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><strong>Location:</strong> City, Country</li>
+          </ul>
+          <p class="small">Or click Book Now to schedule through Calendly.</p>
+        </div>
+
+        <form class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+
+          <label>
+            <span>Service</span>
+            <select name="service">
+              <option>Service One</option>
+              <option>Service Two</option>
+              <option>Service Three</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Preferred date/time</span>
+            <input type="text" name="date" placeholder="e.g. 2026-01-15 morning">
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Booking Request</button>
+            <a class="btn outline" href="https://calendly.com/your-username" target="_blank" rel="noopener">Or Book Live</a>
+          </div>
+
+          <p class="form-note small">This form uses Formspree. Replace the action URL with your Formspree endpoint or your own form handler to receive messages.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Your Business Name — <a href="#contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Small JS helper to open the inline SVG as a new page for "click to view larger"
+    function openSVG(anchor){
+      var svg = anchor.querySelector('svg');
+      if(!svg) return;
+      var serializer = new XMLSerializer();
+      var svgString = serializer.serializeToString(svg);
+      var blob = new Blob([svgString], {type: 'image/svg+xml'});
+      var url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
+    }
+  </script>
 </body>
 </html>
